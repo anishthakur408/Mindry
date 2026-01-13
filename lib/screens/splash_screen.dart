@@ -95,12 +95,6 @@ class _SplashScreenState extends State<SplashScreen>
       tablet: 150,
       desktop: 180,
     );
-    final emojiSize = ResponsiveHelper.getResponsiveValue<double>(
-      context,
-      mobile: 56,
-      tablet: 70,
-      desktop: 84,
-    );
     final titleSize = ResponsiveHelper.getResponsiveFontSize(context, 56);
     final taglineSize = ResponsiveHelper.getResponsiveFontSize(context, 16);
     final brandingSize = ResponsiveHelper.getResponsiveFontSize(context, 20);
@@ -142,29 +136,25 @@ class _SplashScreenState extends State<SplashScreen>
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            // App Icon/Logo area
+                            // App Icon/Logo - using actual app icon
                             Container(
                               width: logoSize,
                               height: logoSize,
                               decoration: BoxDecoration(
-                                color: AppColors.watercolorYellow,
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color: AppColors.sketchBorder,
-                                  width: 3,
-                                ),
                                 boxShadow: [
                                   BoxShadow(
                                     color: AppColors.cardShadow,
-                                    blurRadius: 20,
-                                    offset: const Offset(0, 8),
+                                    blurRadius: 30,
+                                    offset: const Offset(0, 10),
                                   ),
                                 ],
                               ),
-                              child: Center(
-                                child: Text(
-                                  '📔',
-                                  style: TextStyle(fontSize: emojiSize),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.circular(logoSize * 0.22),
+                                child: Image.asset(
+                                  'assets/images/app_icon.png',
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
