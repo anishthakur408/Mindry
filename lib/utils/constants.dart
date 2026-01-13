@@ -55,8 +55,8 @@ class AppColors {
 
 // App Constants
 class AppConstants {
-  static const String appName = 'MindFlow';
-  static const String appTagline = 'Your AI-Powered Journal';
+  static const String appName = 'Mindry';
+  static const String appTagline = 'Your Personal Journal';
 
   // Gratitude Prompts
   static const List<String> gratitudePrompts = [

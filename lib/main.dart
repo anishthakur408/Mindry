@@ -10,7 +10,7 @@ import 'providers/todo_provider.dart';
 import 'services/database_service.dart';
 import 'services/todo_database_service.dart';
 import 'services/preferences_service.dart';
-import 'screens/home_screen.dart';
+import 'screens/splash_screen.dart';
 import 'utils/theme.dart';
 import 'utils/constants.dart';
 
@@ -59,7 +59,7 @@ class MindFlowApp extends StatelessWidget {
         title: AppConstants.appName,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.darkTheme,
-        home: const HomeScreen(),
+        home: const SplashScreen(),
       ),
     );
   }
